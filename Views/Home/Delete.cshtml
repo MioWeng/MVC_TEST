@@ -1,0 +1,59 @@
+﻿@model MVC_TEST.Models.Employees
+
+@{
+    ViewBag.Title = "註銷";
+}
+
+<h2>註銷</h2>
+
+<h3>確定要註銷嗎?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adderess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adderess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="註銷" class="btn btn-default" />
+        </div>
+        <br />
+        <div>
+            @Html.ActionLink("返回首頁", "Index")
+        </div>
+    }
+</div>
